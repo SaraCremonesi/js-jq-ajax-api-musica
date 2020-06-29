@@ -16,27 +16,38 @@
         </header>
 
         <div class="cds-container container">
+          <div class="container">
+            <div class="genre">
+              <select id="genere-musicale">
+                <option value="All">All</option>
+                <option value="Pop">Pop</option>
+                <option value="Rock">Rock</option>
+                <option value="Metal">Metal</option>
+                <option value="Jazz">Jazz</option>
+              </select>
+            </div>
+          </div>
             <!-- Disco ad esempio -->
-            <div class="cd">
+            <!-- <div class="cd {{genre}}">
                 <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Ten_Summoner%27s_Tales.jpg" alt="">
                 <h3>Ten's Summoners Tales</h3>
                 <span class="author">Sting</span>
                 <span class="year">1993</span>
                 <span class="genre">Pop</span>
-            </div>
+            </div> -->
         </div>
 
         <!-- Template Handlebars -->
         <script id="entry-template" type="text/x-handlebars-template">
-            <div class="cd">
-              <img src={{poster}}>
+            <div class="cd {{genre}}">
+              <img src={{poster}} alt="">
               <h3>{{title}}</h3>
               <span class="author">{{author}}</span>
               <span class="year">{{year}}</span>
               <span class="genre">{{genre}}</span>
             </div>
         </script>
-        
+
         <script src="main.js" charset="utf-8"></script>
     </body>
 </html>

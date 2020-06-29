@@ -71,3 +71,8 @@ header img {
   color: grey;
   margin-top: 4%;
 }
+
+select {
+  margin-bottom: 3%;
+  width: 70px;
+}

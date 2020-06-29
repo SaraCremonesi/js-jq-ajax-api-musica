@@ -17,6 +17,18 @@ $(document).ready(function() {
     );
   });
 
+	// Creo il filtro in base ai generi musicali
+	$('#genere-musicale').change(function() {
+		var genreSelected = $(this).val();
+
+		if (genreSelected === 'All') {
+			$('.cd').show();
+		} else {
+			$('.cd').hide();
+			$('.' + genreSelected).show();
+		}
+	});
+
   // Creo la funzione per stampare a schermo i dati dei vari cd
   function printCD(arrayCD) {
     // Handlebars
